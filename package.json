@@ -1,0 +1,17 @@
+{
+  "name": "namuh-auto-invest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check scripts/verify.mjs && node --check scripts/preflight.mjs && node --test",
+    "preflight": "node scripts/preflight.mjs",
+    "dry": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
